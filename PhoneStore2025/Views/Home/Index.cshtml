@@ -1,0 +1,19 @@
+﻿@using DataAccess.Entities
+@using UI.Controllers
+
+@model List<Item>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Вітаємо в Магазині ХозБутік</h1>
+
+    @for (int i = 0; i < 2; ++i)
+    {
+         <p>Купляйте @Model[i].Name за @Model[i].Price баксів</p> 
+    }
+    <button type="button" class="btn btn-outline-success">Success</button>
+
+</div>
